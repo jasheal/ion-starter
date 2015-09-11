@@ -1,0 +1,41 @@
+{
+   "app": {
+      "js": {
+         "src": [
+            "app/components/app.module.js",
+            "app/components/**/*.module.js",
+            "app/components/**/*.js"
+         ],
+         "dest": "www/js/"
+      },
+      "css": {
+         "src": "",
+         "dest": ""
+      },
+      "sass": {
+         "src": "scss/**/*.scss",
+         "dest": ""
+      },
+      "templates": {
+         "src": "",
+         "dest": ""
+      },
+      "images": {
+         "src": "",
+         "dest": ""
+      },
+      "fonts": {
+         "src": "",
+         "dest": ""
+      },
+      "tpl": {
+         "src": "app/components/**/*.tpl",
+         "dest": "www/js/"
+      },
+      "index": {
+         "src": "app/index.html",
+         "dest": "www/"
+      }
+   },
+   "vendors": ""
+}

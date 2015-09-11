@@ -1,0 +1,41 @@
+{
+  "app": {
+    "js": {
+       "src":[
+        "./app/app.module.js",
+        "./app/components/**/*.module.js",
+        "./app/**/*.js"
+      ],
+      "dest":"www/js/"
+    },
+    "tpl": {
+      "src": "./app/components/**/*.tpl",
+      "dest": "./www/js"
+    },
+    "css": {
+      "src": "./app/assets/css/*.css",
+      "dest": "./www/css"
+    },
+    "sass": {
+      "src": "./app/assets/scss/**/*.scss"
+    },
+    "fonts": {
+      "src": [ "./app/assets/fonts/*","./libs/ionic/fonts/*"],
+      "dest": "./www/fonts"
+    },
+    "images": {
+      "src": [ "./app/assets/img/*"],
+      "dest": "./www/img"
+    },
+    "index": {
+      "src": "./app/index.html",
+      "dest": "./www"
+    }
+  },
+  "vendors": {
+    "src" : [
+      "./libs/ionic/js/ionic.bundle.js"
+    ],
+    "dest": "./www/js"
+  }
+}
