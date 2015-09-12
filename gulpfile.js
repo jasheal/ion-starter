@@ -15,17 +15,16 @@ var minifyHtml = require('gulp-minify-html')
 gulp.task('build', ['vndr', 'bndl', 'tpl', 'sass', 'css', 'fonts', 'images', 'index']);
 
 gulp.task('watch', function (file) {
-
-   gulp.watch(paths.app.index.src, ['index']);
-   gulp.watch(paths.app.tpl.src, ['tpl']);
-   gulp.watch(paths.app.sass.src, ['sass']);
-   gulp.watch(paths.app.css.src, ['css']);
-   gulp.watch(paths.app.js.src, {verbose:true}, ['bndl'])
-   .on('change', function(evt){
-      console.log(gutil.colors.magenta('[Watcher] File ' + evt.path.replace(/.*(?=js)/,'') + ' was ' + evt.type + ', bundling...'));
-    });
-   gulp.watch(paths.app.images.src, ['images']);
-   gulp.watch(paths.app.fonts.src, ['fonts']);
+   function fileChange(evt){
+     console.log(gutil.colors.magenta('[Watcher] File ' + evt.path.replace(new RegExp('/.*(?=/)/'), '') + ' was ' + evt.type + ', bundling...'));
+   }
+   gulp.watch(paths.app.index.src, ['index']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.tpl.src, ['tpl']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.sass.src, ['sass']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.css.src, ['css']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.js.src, {verbose:true}, ['bndl']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.images.src, ['images']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.fonts.src, ['fonts']).on('change', function(evt){fileChange(evt)});
 });
 
 // Put all .tpl templates into template cache

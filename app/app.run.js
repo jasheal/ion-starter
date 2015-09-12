@@ -20,6 +20,5 @@
         }
         console.log('Running...')
       });
-
     }
 })();

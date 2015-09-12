@@ -18,7 +18,7 @@
           var defer = $q.defer();
 
           var data = {
-            title: "Splash View",
+            title: "Splash View!",
             content: "This template has been retrieved from the template cache and was minimised"
           }
           defer.resolve(data)
