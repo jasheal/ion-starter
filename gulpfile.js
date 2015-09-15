@@ -9,7 +9,9 @@ var sh = require('shelljs');
 var paths = require('./_paths.json');
 var sourcemaps = require('gulp-sourcemaps');
 var templateCache = require('gulp-angular-templatecache');
-var minifyHtml = require('gulp-minify-html')
+var minifyHtml = require('gulp-minify-html');
+var uglify = require('gulp-uglify');
+
 
 // gulp.task('default', ['sass']);
 gulp.task('build', ['vndr', 'bndl', 'tpl', 'sass', 'css', 'fonts', 'images', 'index']);
