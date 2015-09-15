@@ -19,7 +19,7 @@
 
           var data = {
             title: "Splash View!",
-            content: "This template has been retrieved from the template cache and was minimised"
+            content: "This minimised template has been retrieved from the $templateCache"
           }
           defer.resolve(data)
 

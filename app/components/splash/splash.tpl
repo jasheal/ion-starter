@@ -4,5 +4,6 @@
       <h2>{{splash.title}}</h2>
       <p>{{splash.content}}</p>
     </div>
+    <splash-hello />
   </ion-content>
 </ion-view>
