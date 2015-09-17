@@ -23,6 +23,7 @@ gulp.task('watch', function (file) {
    gulp.watch(paths.app.index.src, ['index']).on('change', function(evt){fileChange(evt)});
    gulp.watch(paths.app.tpl.src, ['tpl']).on('change', function(evt){fileChange(evt)});
    gulp.watch(paths.app.sass.src, ['sass']).on('change', function(evt){fileChange(evt)});
+   gulp.watch(paths.app.sass.watch, ['sass']).on('change', function(evt){fileChange(evt)});
    gulp.watch(paths.app.css.src, ['css']).on('change', function(evt){fileChange(evt)});
    gulp.watch(paths.app.js.src, {verbose:true}, ['bndl']).on('change', function(evt){fileChange(evt)});
    gulp.watch(paths.app.images.src, ['images']).on('change', function(evt){fileChange(evt)});
@@ -48,7 +49,7 @@ gulp.task('bndl', function(done) {
   gulp.src(paths.app.js.src)
     .pipe(sourcemaps.init())
     .pipe(concat('bundle.min.js'))
-    //.pipe(uglify({mangle: false}))
+    .pipe(uglify({mangle: false}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.app.js.dest))
     .on('end', done)

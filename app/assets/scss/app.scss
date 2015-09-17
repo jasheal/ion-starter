@@ -1,0 +1,16 @@
+
+
+// Include all of Ionic
+@import
+
+  // Put all variables & overides before importing ionic
+
+  "variables",
+
+  // Import ionic
+  "./libs/ionic/scss/ionic",
+
+  // Import our custom sass files
+  "type",
+  "widgets",
+  "sprockets";

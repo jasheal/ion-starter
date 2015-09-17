@@ -17,7 +17,8 @@
       "dest": "./www/css"
     },
     "sass": {
-      "src": "./app/assets/scss/**/*.scss"
+      "src": "./app/assets/scss/app.scss",
+      "watch": "./app/assets/scss/**/*.scss"
     },
     "fonts": {
       "src": [ "./app/assets/fonts/*","./libs/ionic/fonts/*"],
